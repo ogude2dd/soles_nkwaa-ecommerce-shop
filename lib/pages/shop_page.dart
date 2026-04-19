@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:solesnkwaa/components/shoe_tile.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -37,7 +36,7 @@ class _ShopPageState extends State<ShopPage> {
           ),
         ),
 
-        // message
+        //message
         Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 25.0,
@@ -48,14 +47,11 @@ class _ShopPageState extends State<ShopPage> {
           ),
         ),
 
-        // hot picks
+        //hot picks
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 25.0,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Row(
-            mainAxisAlignment:
-                MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
               Text(
@@ -78,22 +74,9 @@ class _ShopPageState extends State<ShopPage> {
 
         const SizedBox(height: 10),
 
-        Expanded(
-          child: ListView.builder(
-            itemCount: 4,
-            itemBuilder: (context, index) {
-              //create a shoe
-              // Shoe shoe = Shoe(
-              //   name: 'New Balance XC-72',
-              //   price: '240',
-              //   description: 'cool shoe',
-              //   imagePath:
-              //       'lib/images/New Balance XC-72.png',
-              // );
-              // return ShoeTile(shoe: shoe);
-            },
-          ),
-        ),
+        Expanded(child: ListView.builder(itemBuilder: (context, index) {
+          return ShoeTile();
+        },),),
       ],
     );
   }
