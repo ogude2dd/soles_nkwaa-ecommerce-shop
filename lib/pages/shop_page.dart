@@ -25,7 +25,7 @@ class _ShopPageState extends State<ShopPage> {
           ),
           child: Row(
             mainAxisAlignment:
-                MainAxisAlignment.spaceBetween,
+            MainAxisAlignment.spaceBetween,
             children: const [
               Text(
                 'Search',

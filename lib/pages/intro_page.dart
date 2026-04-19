@@ -16,7 +16,7 @@ class IntroPage extends StatelessWidget {
           ),
           child: Column(
             mainAxisAlignment:
-                MainAxisAlignment.center,
+            MainAxisAlignment.center,
             children: [
               // logo
               Padding(
@@ -61,14 +61,14 @@ class IntroPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                       const HomePage(),
+                    const HomePage(),
                   ),
                 ),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[900],
                     borderRadius:
-                        BorderRadius.circular(12),
+                    BorderRadius.circular(12),
                   ),
                   padding: const EdgeInsets.all(
                     25,
@@ -79,7 +79,7 @@ class IntroPage extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight:
-                            FontWeight.bold,
+                        FontWeight.bold,
                         fontSize: 16,
                       ),
                     ),
