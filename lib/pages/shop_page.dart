@@ -4,7 +4,9 @@ import 'package:solesnkwaa/components/shoe_tile.dart';
 import 'package:solesnkwaa/models/cart.dart';
 
 import '../models/shoe.dart';
-import '../models/cart.dart';
+
+
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -22,12 +24,13 @@ class _ShopPageState extends State<ShopPage> {
     ).addItemToCart(shoe);
 
     // alert the user, shoe successfully added
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Successfully added!'),
-        content: Text('Check your cart'),
-      ),
+    Fluttertoast.showToast(
+      msg: "Successfully added to cart! 🛍️",
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.grey[900],
+      textColor: Colors.white,
+      fontSize: 14.0,
     );
   }
 
